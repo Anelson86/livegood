@@ -1,0 +1,91 @@
+/* Réinitialisation des styles de base */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h5,h3{
+    text-align:center;
+}
+
+/* Style du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1bbe62;
+
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #1bbe62;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style de la navigation */
+nav {
+    background-color: #5f19f4;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style du contenu principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Styles des titres */
+h1, h2, h3, h5 {
+    margin: 10px 0;
+}
+
+/* Style des paragraphes */
+p {
+    margin: 10px 0;
+}
+
+/* Style de la liste non ordonnée */
+ul {
+    margin: 10px 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Style du pied de page */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.menu a {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+#matable {
+    width: 100px; /* Vous pouvez définir la largeur que vous préférez, par exemple en pourcentage ou en pixels. */
+}
+.table-large {
+    width: 100%; /* Vous pouvez définir la largeur que vous préférez, par exemple en pourcentage ou en pixels. */
+}
