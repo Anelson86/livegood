@@ -4,27 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>liveGood</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/stylesTableau.css">
+    <link rel="stylesheet" href="CSS/stylesMenu.css">
+
 </head>
 
 <body>
     <header>
+        <p><span id="dateTime"></span></p>
         <h1>Bienvenue sur liveGood</h1>
         <p>Votre destination pour un mode de vie sain.</p>
     </header>
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="produits.html">Rang</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+   
+   
+<div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<div class="sidebar">
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produits.html">Rang</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="close-icon" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+    </div>
+</div>
     <main>
         <h2>Brève presentation de Livegood en francais</h2>
 
         <div style="text-align: center;">
             <video width="560" height="315" controls>
-                <source src="video.mp4" type="video/mp4">
+                <source src="VIDEOS/video.mp4" type="video/mp4">
             </video>
         </div>
         <p><b> Pour reserver une position gratuitement, cliquez sur ce lien </b> :<a
@@ -35,7 +50,7 @@
 
         <div style="text-align: center;">
             <video width="560" height="315" controls>
-                <source src="video2.mp4" type="video/mp4">
+                <source src="VIDEOS/video2.mp4" type="video/mp4">
             </video>
         </div>
         <p><b> Pour reserver une position gratuitement, cliquez sur ce lien </b> :<a
@@ -43,12 +58,15 @@
                 https://LiveGoodTour.com/Anelson </a> </p>
 
         <h3>Livegood qu'est ce que c'est?</h3>
-        <p> </p>
-        LiveGood est une société de marketing de réseau créée aux États-Unis et devenue un phénomène mondial. Elle a été
-        pré lancée en Juin 2022 aux USA, et officiellement lancée dans plus de 200 pays le 13 Décembre 2022. Des gens du
-        monde entier ont rejoint cette entreprise qui offre des
-        Avec un engagement à rester à la pointe de la science et de la technologie nutritionnelle, elle fournit, entre
-        autres, des produits multivitaminés et de beauté de la plus haute qualité et de très bon marché.
+        <p>
+            LiveGood est une société de marketing de réseau créée aux États-Unis et devenue un phénomène mondial. Elle a
+            été
+            pré lancée en Juin 2022 aux USA, et officiellement lancée dans plus de 200 pays le 13 Décembre 2022. Des
+            gens du
+            monde entier ont rejoint cette entreprise qui offre des
+            Avec un engagement à rester à la pointe de la science et de la technologie nutritionnelle, elle fournit,
+            entre
+            autres, des produits multivitaminés et de beauté de la plus haute qualité et de très bon marché.
         </p>
         <p>En plus de ses produits, elle donne également la possibilité de gagner un revenu avec le plan de rémunération
             le plus excitant de l'industrie !
@@ -68,20 +86,6 @@
             profondeur.
         </p>
 
-        <style>
-            table {
-                border-collapse: collapse;
-                width: 50%;
-            }
-
-            th,
-            td {
-                border: 1px solid black;
-                padding: 8px;
-                text-align: center;
-            }
-        </style>
-        </head>
 
         <body>
             <table id="matable" class="table-large">
@@ -186,8 +190,6 @@
                 </tr>
             </table>
 
-
-
             <h5>2. COMMISSIONS MATRICIELLES</h5>
             <p>Lorsque vous verrouillez votre position dans Live Good , vous bénéficiez de votre propre centre
                 d'affaires dans notre matrice 2x15 à remplissage rapide ! Au fur et à mesure que de plus en plus de
@@ -195,20 +197,6 @@
                 sont déjà, à la suite de leur recruteur. Ainsi, plus tôt vous verrouillez votre position, plus votre
                 position sera élevée dans la matrice.</p>
 
-            <style>
-                table {
-                    border-collapse: collapse;
-                    width: 100%;
-                }
-
-                th,
-                td {
-                    border: 1px solid black;
-                    padding: 8px;
-                    text-align: center;
-                }
-            </style>
-            </head>
 
             <body>
                 <table>
@@ -379,21 +367,6 @@
                     inscrivez, ET un pourcentage pour toutes ces personnes inscrivent CINQ GÉNÉRATIONS D'INSCRIPTION EN
                     PROFONDEUR, peu importe où elles se situent dans votre matrice !</p>
 
-                <head>
-                    <style>
-                        table {
-                            border-collapse: collapse;
-                            width: 60%;
-                        }
-
-                        th,
-                        td {
-                            border: 1px solid black;
-                            padding: 8px;
-                            text-align: center;
-                        }
-                    </style>
-                </head>
 
                 <body>
                     <table>
@@ -463,6 +436,7 @@
                     </p>
 
                     <table>
+
                         <tr>
                             <th>Niveau/Rang</th>
                             <th>Non classé</th>
@@ -573,21 +547,6 @@
                         personnellement inscrit par mois, quel que soit le rang.
                     </p>
 
-                    <style>
-                        table {
-                            border-collapse: collapse;
-                            width: 60%;
-                        }
-
-                        th,
-                        td {
-                            border: 1px solid black;
-                            padding: 8px;
-                            text-align: center;
-                        }
-                    </style>
-                    </head>
-
                     <body>
                         <table>
                             <tr>
@@ -673,8 +632,12 @@
 
     </main>
     <footer>
-        <p>&copy; 2023 liveGood</p>
+        <p>&copy; <span id="currentYear"></span> liveGood</p>
+
     </footer>
+    <script src="SCRIPT/scriptFooter.js"></script>
+    <script src="SCRIPT/scriptMenu.js"></script>
+
 </body>
 
 </html>

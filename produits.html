@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>liveGood</title>
-    <link rel="stylesheet" type="text/css" href="produits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="CSS/stylesMenu.css">
+
+
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
 </head>
 <body>
     <header>
+        <p><span id="dateTime"></span></p>
         <h1>Bienvenue sur le rang liveGood</h1>
        
     </header>
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="sidebar">
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="produits.html">Rang</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+        <div class="close-icon" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
     <main>
     <h2>Qualifications Live Good Rank</h2>
     
@@ -39,9 +52,15 @@
     <p>Doit avoir un total de 50 000 membres dans votre équipe avec pas plus de 10 000 comptant à partir de n'importe quelle branche individuelle de l'arbre des recruteurs.</p>
     
     <p>*Les membres actifs sont les membres qui ont un abonnement actif pour le mois en cours.</p>
+
+</main>
+<footer>
+    <p>&copy; <span id="currentYear"></span> liveGood</p>
+</footer>
+<script src="SCRIPT/scriptFooter.js"></script>
+<script src="SCRIPT/scriptMenu.js"></script>
+
 </body>
 </html>
-</main>
-    <footer>
-        <p>&copy; 2023 liveGood</p>
-    </footer>
+
+

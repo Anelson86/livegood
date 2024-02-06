@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* Style du corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial ou une police sans sérif */
+    line-height: 1.6; /* Hauteur de ligne pour un meilleur confort de lecture */
+    display: flex; /* Utilisation de flexbox pour le positionnement */
+    flex-direction: column; /* Les éléments sont disposés en colonne */
+    min-height: 100vh; /* La hauteur minimale de la page est égale à la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut du corps */
+    padding: 0; /* Supprime les espaces de remplissage par défaut du corps */
+}
+
+header {
+    text-align: center;
+    background-color: #1bbe62;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+.menu a {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2,h3,h4 {
+    color: #333;
+    text-align: center;
+    background-color: gray;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Style du footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: auto;   /* Le footer reste en bas de l'écran */
+}

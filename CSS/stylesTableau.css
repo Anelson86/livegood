@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px; /* Limite la largeur maximale du tableau à 500 pixels */
+    margin: 0 auto; /* Centre le tableau horizontalement */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
