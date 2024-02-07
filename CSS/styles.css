@@ -1,49 +1,49 @@
-
+/* Réglages généraux pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
+    font-family: Arial, sans-serif; /* Utilise la police Arial ou une police sans-serif par défaut */
+    line-height: 1.6; /* Définit la hauteur de ligne pour améliorer la lisibilité */
+    flex-direction: column; /* Dispose les éléments enfants en colonne */
+    min-height: 100vh; /* Garantit que le corps de la page a au moins la taille de l'écran */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espaces intérieurs par défaut */
+    font-size: 24px; /* Définit la taille de la police pour le texte du corps */
     overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
-
+/* Styles pour l'en-tête de la page */
 header {
-    text-align: center;
-    background-color: #1bbe62;
-    color: #fff;
-    padding: 10px;
+    text-align: center; /* Centre le contenu du texte */
+    background-color: #227dea; /* Définit la couleur de fond */
+    color: #fff; /* Définit la couleur du texte */
+    padding: 10px; /* Ajoute un espace intérieur autour du contenu */
 }
 
+/* Styles pour la section principale de la page */
 main {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Définit la largeur maximale de la section principale */
+    margin: 0 auto; /* Centre la section principale horizontalement */
+    padding: 20px; /* Ajoute un espacement intérieur autour du contenu */
+    background-color: #fff; /* Définit la couleur de fond */
+    border: 1px solid #ccc; /* Ajoute une bordure solide autour de la section principale */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre à la section principale */
 }
-
+/* Ajoute une marge en bas à chaque section */
 section {
     margin-bottom: 20px;
 }
 
-h2,h3,h4 {
-    color: #333;
-    text-align: center;
-    background-color: gray;
+/* Styles pour les titres de niveau 2, 3 et 4 */
+h2, h3, h4 {
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    background-color: gray; /* Couleur de fond */
 }
 
-
-/* Style du footer */
+/* Styles pour le footer */
 footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    margin-top: auto;   /* Le footer reste en bas de l'écran */
+    text-align: center; /* Centrer le contenu du footer */
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 20px; /* Ajoute un espace intérieur autour du contenu */
+    margin-top: auto; /* Le footer reste en bas de l'écran */
 }
