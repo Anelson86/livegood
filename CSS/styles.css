@@ -1,58 +1,107 @@
-/* Réglages généraux pour le corps de la page */
+/* Styles pour le corps de la page */
 body {
-    font-family: Arial, sans-serif; /* Utilise la police Arial ou une police sans-serif par défaut */
-    line-height: 1.6; /* Définit la hauteur de ligne pour améliorer la lisibilité */
-    min-height: 100vh; /* Garantit que le corps de la page a au moins la taille de l'écran */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
     margin: 0; /* Supprime les marges par défaut */
     padding: 0; /* Supprime les espaces intérieurs par défaut */
-    font-size: 24px; /* Définit la taille de la police pour le texte du corps */
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    display: flex;
+    font-family: 'Arial', sans-serif; /* Utilise la police Arial ou une police sans-serif par défaut */
+    display: flex; /* Utilise le modèle de boîte flexible */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
     flex-direction: column; /* Dispose les éléments enfants en colonne */
-    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la taille de la fenêtre */
+    min-height: 100vh; /* 100% de la hauteur de la fenêtre visible */
 }
 
-/* Styles pour l'en-tête de la page */
-header {
-    text-align: center; /* Centre le contenu du texte */
-    background-color: #227dea; /* Définit la couleur de fond */
-    color: #fff; /* Définit la couleur du texte */
-    padding: 10px; /* Ajoute un espace intérieur autour du contenu */
+/* Styles pour l'icône du menu */
+.menu-icon {
+    display: block; /* Affiche l'élément en tant que bloc */
+    background: #333; /* Couleur de fond de l'icône */
+    color: #fff; /* Couleur du texte */
+    padding: 10px; /* Espacement intérieur */
+    cursor: pointer; /* Curseur de la souris au survol */
+    font-size: 36px; /* Taille de la police */
+}
+
+/* Styles pour les barres de l'icône du menu */
+.menu-icon-bar {
+    display: block; /* Affiche l'élément en tant que bloc */
+    width: 25px; /* Largeur des barres */
+    height: 3px; /* Hauteur des barres */
+    background: #fff; /* Couleur des barres */
+    margin: 5px 0; /* Marge supérieure et inférieure des barres */
+}
+
+/* Styles pour le menu latéral */
+.side-menu {
+    position: fixed; /* Position fixée par rapport à la fenêtre du navigateur */
+    top: 0; /* Position à partir du haut de la fenêtre */
+    left: -250px; /* Position à partir de la gauche de la fenêtre (masqué initialement) */
+    width: 250px; /* Largeur du menu */
+    height: 100%; /* Hauteur du menu, occupant toute la hauteur de la fenêtre */
+    background: #333; /* Couleur de fond du menu */
+    padding-top: 50px; /* Espacement en haut du menu */
+    transition: left 0.3s ease; /* Effet de transition pour l'animation de l'ouverture/fermeture du menu */
+}
+
+/* Styles pour la liste non ordonnée à l'intérieur du menu */
+.side-menu ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime les espaces intérieurs de la liste */
+}
+
+/* Styles pour les éléments de la liste dans le menu */
+.side-menu ul li {
+    padding: 10px; /* Espacement autour des éléments de la liste */
+}
+
+/* Styles pour les liens à l'intérieur des éléments de la liste */
+.side-menu ul li a {
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime la soulignement des liens */
+}
+
+/* Styles pour l'icône de fermeture du menu */
+.close-icon {
+    position: absolute; /* Position absolue par rapport au conteneur parent */
+    top: 10px; /* Position à partir du haut du menu */
+    right: 10px; /* Position à partir de la droite du menu */
+    font-size: 36px; /* Taille de la police de l'icône */
+    color: #fff; /* Couleur de l'icône */
+    cursor: pointer; /* Curseur de la souris au survol */
 }
 
 section p {
     text-align: justify;
+    /* Ajouter une réinitialisation des styles */
+    word-spacing: normal;
+    letter-spacing: normal;
+    font-size: 24px;
+    max-width: 600px; /* Ajustez cette valeur selon vos besoins */
+    margin: 0 auto; /* Pour centrer le paragraphe */
 }
 
-/* Styles pour la section principale de la page */
-main {
-    text-align: justify;
-    max-width: 600px; /* Définit la largeur maximale de la section principale */
-    margin: 0 auto; /* Centre la section principale horizontalement */
-    padding: 20px; /* Ajoute un espacement intérieur autour du contenu */
-    background-color: #fff; /* Définit la couleur de fond */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre à la section principale */
-}
 
 /* Ajoute une marge en bas à chaque section */
 section {
+    background-color: whitesmoke; /* Couleur de fond pour toutes les sections */
     margin-bottom: 20px;
 }
 
-/* Media Queries pour rendre la mise en page adaptable */
-@media screen and (max-width: 768px) {
-    main {
-        max-width: 90%; /* Réduire la largeur maximale sur les écrans plus petits */
-    }
-}
 
 
-/* Styles pour les titres de niveau 2, 3 et 4 */
-h2, h3, h4 {
+/* Styles pour chaque titre individuel */
+h2, h3, h4, h5, h6 {
     color: #333; /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    background-color: gray; /* Couleur de fond */
+    text-align: center; /* Centrer le titre */
+    padding: 10px; /* Espacement autour du titre */
+    border-radius: 5px; /* Bord arrondi */
+    font-size: 24px; /* Taille de la police */
 }
+
+/* Appliquer le fond gris uniquement aux titres h2 */
+h2 {
+    background-color: gray; /* Couleur de fond du titre h2 */
+}
+
+
 
 /* Styles pour le footer */
 footer {

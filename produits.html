@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>liveGood</title>
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="CSS/stylesMenu.css">
-
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesNavBar.css">
+    <link rel="stylesheet" href="CSS/stylesDate.css">
 </head>
 <body>
-    <header>
-        <p><span id="dateTime"></span></p>
-        <h1>Bienvenue sur le rang liveGood</h1>
-       
-    </header>
-    <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
+    <nav class="top-nav">
+        <p id="current-time"><i class="fa fa-clock-o"></i></p>
     
-    <div class="sidebar">
-        <ul class="menu">
+        <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="produits.html">Rang</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="close-icon" onclick="toggleMenu()">
-            <i class="fas fa-times"></i>
-        </div>
-    </div>
-    <main>
+    </nav>
+    
+<div class="menu-icon">
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+</div>
+
+<nav class="side-menu">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produits.html">Rang</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="close-icon">&times;</div>
+</nav>
 
    <section>
     <h2>Qualifications Live Good Rank</h2>
@@ -68,12 +71,14 @@
     <p>*Les membres actifs sont les membres qui ont un abonnement actif pour le mois en cours.</p>
 </section>
 
-</main>
 <footer>
     <p>&copy; <span id="currentYear"></span> liveGood</p>
 </footer>
+<script src="SCRIPT/script.js"></script>
+<script src="SCRIPT/scriptDate.js"></script>
 <script src="SCRIPT/scriptFooter.js"></script>
-<script src="SCRIPT/scriptMenu.js"></script>
+
+
 
 </body>
 </html>
