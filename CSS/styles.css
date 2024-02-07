@@ -2,12 +2,14 @@
 body {
     font-family: Arial, sans-serif; /* Utilise la police Arial ou une police sans-serif par défaut */
     line-height: 1.6; /* Définit la hauteur de ligne pour améliorer la lisibilité */
-    flex-direction: column; /* Dispose les éléments enfants en colonne */
     min-height: 100vh; /* Garantit que le corps de la page a au moins la taille de l'écran */
     margin: 0; /* Supprime les marges par défaut */
     padding: 0; /* Supprime les espaces intérieurs par défaut */
     font-size: 24px; /* Définit la taille de la police pour le texte du corps */
     overflow-x: hidden; /* Empêche le défilement horizontal */
+    display: flex;
+    flex-direction: column; /* Dispose les éléments enfants en colonne */
+    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la taille de la fenêtre */
 }
 
 /* Styles pour l'en-tête de la page */
@@ -18,19 +20,32 @@ header {
     padding: 10px; /* Ajoute un espace intérieur autour du contenu */
 }
 
+section p {
+    text-align: justify;
+}
+
 /* Styles pour la section principale de la page */
 main {
+    text-align: justify;
     max-width: 600px; /* Définit la largeur maximale de la section principale */
     margin: 0 auto; /* Centre la section principale horizontalement */
     padding: 20px; /* Ajoute un espacement intérieur autour du contenu */
     background-color: #fff; /* Définit la couleur de fond */
-    border: 1px solid #ccc; /* Ajoute une bordure solide autour de la section principale */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre à la section principale */
 }
+
 /* Ajoute une marge en bas à chaque section */
 section {
     margin-bottom: 20px;
 }
+
+/* Media Queries pour rendre la mise en page adaptable */
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 90%; /* Réduire la largeur maximale sur les écrans plus petits */
+    }
+}
+
 
 /* Styles pour les titres de niveau 2, 3 et 4 */
 h2, h3, h4 {
