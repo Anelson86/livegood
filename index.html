@@ -1,56 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>Livegood</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-</head>
-<body class="w3-black">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesNavBar.css">
+    <link rel="stylesheet" href="CSS/stylesTableau.css">
+    <link rel="stylesheet" href="CSS/stylesDate.css">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="VIDEOS/livgood1.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>Accueil</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>A Propos</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>Rang</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>Contact</p>
-  </a>
+
+
+   
+</head>
+<body>
+    <nav class="top-nav">
+   <p id="current-time"><i class="fa fa-clock-o"></i></p>
+    
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="produits.html">Rang</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<div class="menu-icon">
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+</div>
+
+<nav class="side-menu">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produits.html">Rang</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="close-icon">&times;</div>
 </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Accueil</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">A Propos</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Rang</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact</a>
-  </div>
-</div>
 <section>
     <h2>Brève présentation de Livegood en français</h2>
 
@@ -59,58 +47,30 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <source src="VIDEOS/video.mp4" type="video/mp4">
         </video>
     </div>
-    <p style="text-align: center;"><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
+    <p><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
 </section>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Je suis</span> Livegood</h1>
-    <p>Entreprise de vente en ligne</p>
-    <video controls class="w3-image" width="992" height="1108">
-      <source src="VIDEOS/video2.mp4" type="video/mp4">
-    
-    </video>
-      </header>
+<section>
+    <h2>Brève présentation de Livegood en créole</h2>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Livegood</h2>
-    <hr style="width:200px" class="w3-opacity">
+    <div style="text-align: center;">
+        <video width="560" height="315" controls>
+            <source src="VIDEOS/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
+</section>
+
+<section>
+    <h3>Livegood qu'est-ce que c'est?</h3>
     <p>LiveGood est une société de marketing de réseau créée aux États-Unis et devenue un phénomène mondial. Elle a été pré-lancée en juin 2022 aux USA, et officiellement lancée dans plus de 200 pays le 13 décembre 2022. Des gens du monde entier ont rejoint cette entreprise qui offre des produits multivitaminés et de beauté de la plus haute qualité et à très bon marché.</p>
     <p>En plus de ses produits, elle donne également la possibilité de gagner un revenu avec le plan de rémunération le plus excitant de l'industrie ! En fait, vous pouvez gagner jusqu'à 2 047,50 $ par MOIS sans jamais inscrire une seule personne ! Et si vous décidez de partager les produits et le plan de rémunération avec d'autres, vous pouvez gagner encore plus !</p>
-    <p>Livegood c'est quoi ?
-        C'est une entreprise américaine qui propose des solutions pour être et rester en bonne forme,C'est un projet révolutionnaire dans le domaine du marketing réseaux 
-        Et il a trois concepts. </p>
-        <p>
-        Le premier concept c'est la vente de produits de santé
-        Quand vous vous inscrivez à Livegood, automatiquement l'entreprise vous créé un site en même temps
-        Sur le site sera affiché tous les produits que vende livegood
-        Et à chaque fois que quelqu'un va visiter votre site et va acheter un produit, Livegood va se charger de la livraison directement chez le client et vous vous allez gagner une commission 
-        Cette commission vous sera versée le jeudis qui suit le jour de l'achat de vos clients
-        C'est chaque jeudi que l'on reçoit les payements pour les achats effectués.
-        Ensuite le 2e concept c'est le marketing réseaux
-        Ça c'est le principe du parrainage</p>
-        <p>
-        A chaque fois que vous invitez quelqu'un à s'inscrire dans ce business il fera partie de votre équipe
-        Sur chaque personne que vous allez inviter vous gagnez 25$ (16.000 FCFA )
-        Et quand cette personne invite à son tour une autre personne vous gagnez aussi une commission sur cette nouvelle personne
-        Et tout ces revenus vous seront versés le jeudi qui suit le jour des parrainages
-        Votre équipe grandit au fur et à mesure que vous et vos filleuls continuez de parrainer.
-        Enfin le 3e concept c'est l'affiliation
-        Si vous n'arrivez pas à vendre les produits Livegood et que vous pensez que ça sera compliqué pour vous de parrainer des gens, c'est pas un souci</p>
-        Livegood dit de ne pas vous inquiéter, ya une solution pour vous,le système va lui même vous créer votre équipe  
-        Avec le temps petit à petit le système va vous envoyer des membres dans votre Matrix 
-        Et plus votre équipe est grande plus vos revenus mensuels seront grand
-        Le système va continuer à vous placer des membres en dessous de vous jusqu'à ce que votre matrix se remplisse
-        Et c'est quand votre  matrix sera rempli que vous allez atteindre la barre des 2000$ par mois ( 1millions 200mil f )
-        Tout ce que vous avez à faire c'est vous inscrire pour vous positionner dans la matrix le plus tôt possible et ensuite payer juste 10$ chaque mois (6500f)
-        Ça c'est pour l'entretien de votre boutique et vous garder actif
-        Parce que il faut que vous soyez actif pour que le système vous envoie des membres.</p>
+</section>
 
-    <h3 class="w3-padding-16 w3-text-light-grey">Commissions</h3>
-    <p class="w3-wide">1. COMMISSIONS DE DÉMARRAGE RAPIDE HEBDOMADAIRES</p>
+<section>
+    <h2>Commissions</h2>
+</section>
+    <h5>1. COMMISSIONS DE DÉMARRAGE RAPIDE HEBDOMADAIRES </h5>
     <p>
 
         Pour chaque personne que vous référez à Live Good qui devient membre et affilié pour 49,95 $, nous vous
@@ -223,190 +183,250 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 <td>1%</td>
             </tr>
         </table>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">2. COMMISSIONS MATRICIELLES</p>
-    <p>Lorsque vous verrouillez votre position dans Live Good , vous bénéficiez de votre propre centre
-        d'affaires dans notre matrice 2x15 à remplissage rapide ! Au fur et à mesure que de plus en plus de
-        personnes rejoignent Live Good chaque semaine, elles sont placées dans la matrice SOUS tous ceux qui y
-        sont déjà, à la suite de leur recruteur. Ainsi, plus tôt vous verrouillez votre position, plus votre
-        position sera élevée dans la matrice.</p>
+
+        <section>
+
+        <h5>2. COMMISSIONS MATRICIELLES</h5>
+        <p>Lorsque vous verrouillez votre position dans Live Good , vous bénéficiez de votre propre centre
+            d'affaires dans notre matrice 2x15 à remplissage rapide ! Au fur et à mesure que de plus en plus de
+            personnes rejoignent Live Good chaque semaine, elles sont placées dans la matrice SOUS tous ceux qui y
+            sont déjà, à la suite de leur recruteur. Ainsi, plus tôt vous verrouillez votre position, plus votre
+            position sera élevée dans la matrice.</p>
 
 
-        <table>
-            <tr>
-                <th>Gains par niveau</th>
-                <th>Non classé</th>
-                <th>Bronze</th>
-                <th>Argent</th>
-                <th>Or</th>
-                <th>Platine</th>
-                <th>Diamant</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>dix</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td></td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td></td>
-                <td></td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>2,50 %</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>2 047,50 $</td>
-                <td>4 095,50 $</td>
-                <td>4 095,50 $</td>
-                <td>8 191,50 $</td>
-                <td>8 191,50 $</td>
-                <td>16 383,50 $</td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <th>Gains par niveau</th>
+                    <th>Non classé</th>
+                    <th>Bronze</th>
+                    <th>Argent</th>
+                    <th>Or</th>
+                    <th>Platine</th>
+                    <th>Diamant</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>dix</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td></td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td></td>
+                    <td></td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2,50 %</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>2 047,50 $</td>
+                    <td>4 095,50 $</td>
+                    <td>4 095,50 $</td>
+                    <td>8 191,50 $</td>
+                    <td>8 191,50 $</td>
+                    <td>16 383,50 $</td>
+                </tr>
+            </table>
+                
+        </section>
+            <section>
+                <h5>3. BONUS CORRESPONDANTS</h5>
+                <p>Aussi ÉNORMES que soient les commissions de démarrage rapide et les bonus matriciels, nos bonus de contrepartie sont encore PLUS GROS ! En plus des 2 047,50 $ ou jusqu'à 16 383,50 que vous pouvez gagner dans votre matrice personnelle, vous égalerez également 50 % des commissions matricielles sur toutes les personnes que vous inscrivez, ET un pourcentage pour toutes ces personnes inscrivent CINQ GÉNÉRATIONS D'INSCRIPTION EN PROFONDEUR, peu importe où elles se situent dans votre matrice !</p>
+            </section>
+        <section>
+                <table>
+                    <tr>
+                        <th>Rang</th>
+                        <th>1ère génération</th>
+                        <th>2e génération</th>
+                        <th>3e génération</th>
+                        <th>4e génération</th>
+                        <th>5e génération</th>
+                    </tr>
+                    <tr>
+                        <td>Inscrit personnellement</td>
+                        <td>50%</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Argent</td>
+                        <td>10%</td>
+                        <td>10%</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Or</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Platine</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Diamant</td>
+                        <td>3%</td>
+                        <td>3%</td>
+                        <td>3%</td>
+                        <td>3%</td>
+                        <td>3%</td>
+                    </tr>
+                </table>
             
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide">4. COMMISSIONS DE VENTE AU DÉTAIL</p>
-    <p>Chacun de nos produits qui changent la vie a un prix membre et un prix de détail. Alors que la
-        plupart des gens choisissent de profiter de notre incroyable abonnement pour seulement 9,95 $
-        par mois afin qu'ils puissent économiser beaucoup plus avec les prix des membres, certaines
-        personnes peuvent simplement vouloir faire des achats aux prix de détail.
-        En tant qu'affilié de Live Good , chaque fois qu'un de vos filleuls effectue un achat en tant
-        que client de détail, vous gagnerez 50 % de la différence entre le prix de membre et le prix de
-        détail.
-        Les commissions de vente au détail sont payées selon la même structure de paiement que les
-        commissions de démarrage rapide. Contrairement aux commissions de démarrage rapide qui ne sont
-        payées qu'une seule fois, les commissions de détail peuvent être gagnées un nombre illimité de
-        fois chaque fois qu'un client de détail passe une commande.
-    </p>
-      <table>
+            </section>
+
+<section>
+                <h5>4. COMMISSIONS DE VENTE AU DÉTAIL</h5>
+                <p>Chacun de nos produits qui changent la vie a un prix membre et un prix de détail. Alors que la
+                    plupart des gens choisissent de profiter de notre incroyable abonnement pour seulement 9,95 $
+                    par mois afin qu'ils puissent économiser beaucoup plus avec les prix des membres, certaines
+                    personnes peuvent simplement vouloir faire des achats aux prix de détail.
+                    En tant qu'affilié de Live Good , chaque fois qu'un de vos filleuls effectue un achat en tant
+                    que client de détail, vous gagnerez 50 % de la différence entre le prix de membre et le prix de
+                    détail.
+                    Les commissions de vente au détail sont payées selon la même structure de paiement que les
+                    commissions de démarrage rapide. Contrairement aux commissions de démarrage rapide qui ne sont
+                    payées qu'une seule fois, les commissions de détail peuvent être gagnées un nombre illimité de
+                    fois chaque fois qu'un client de détail passe une commande.
+                </p>
+            </section>
+        <section>
+                
+            <table>
                 <tr>
                     <th>Niveau/Rang</th>
                     <th>Non classé</th>
@@ -508,75 +528,72 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 </tr>
             </table>
 
-            <div class="w3-white">
-                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-              </div>
-              <p class="w3-wide">5. BONUS INFLUENCEURS</p>
-              <p>Pour les affiliés qui choisissent de commercialiser des produits auprès de clients de détail à
-                plus grande échelle, vous gagnerez des bonus supplémentaires sur tout ce volume. En fait, vous
-                gagnerez jusqu'à 100 % de la différence entre le prix Membre et le prix de détail sur toutes les
-                commandes de vos clients de détail référés.
-                Les bonus d'influence sont payés exclusivement en fonction du volume de vente au détail
-                personnellement inscrit par mois, quel que soit le rang.
-            </p>
             
-            <table>
-                <tr>
-                    <th>Total des ventes au détail par mois</th>
-                    <th>Commissions supplémentaires</th>
-                    <th>Commissions totales sur les clients personnels</th>
-                </tr>
-                <tr>
-                    <td>2 500 $</td>
-                    <td>dix%</td>
-                    <td>60%</td>
-                </tr>
-                <tr>
-                    <td>5 000 $</td>
-                    <td>20%</td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td>10 000 $</td>
-                    <td>30%</td>
-                    <td>80%</td>
-                </tr>
-                <tr>
-                    <td>25 000 $</td>
-                    <td>40%</td>
-                    <td>90%</td>
-                </tr>
-                <tr>
-                    <td>50 000 $</td>
-                    <td>50%</td>
-                    <td>100%</td>
-                </tr>
-            </table>
+            </section>
+<section>
+                <h5>5. BONUS INFLUENCEURS</h5>
+                <p>Pour les affiliés qui choisissent de commercialiser des produits auprès de clients de détail à
+                    plus grande échelle, vous gagnerez des bonus supplémentaires sur tout ce volume. En fait, vous
+                    gagnerez jusqu'à 100 % de la différence entre le prix Membre et le prix de détail sur toutes les
+                    commandes de vos clients de détail référés.
+                    Les bonus d'influence sont payés exclusivement en fonction du volume de vente au détail
+                    personnellement inscrit par mois, quel que soit le rang.
+                </p>
+            </section>
+        <section>
+                    <table>
+                        <tr>
+                            <th>Total des ventes au détail par mois</th>
+                            <th>Commissions supplémentaires</th>
+                            <th>Commissions totales sur les clients personnels</th>
+                        </tr>
+                        <tr>
+                            <td>2 500 $</td>
+                            <td>dix%</td>
+                            <td>60%</td>
+                        </tr>
+                        <tr>
+                            <td>5 000 $</td>
+                            <td>20%</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <td>10 000 $</td>
+                            <td>30%</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>25 000 $</td>
+                            <td>40%</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>50 000 $</td>
+                            <td>50%</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h5>6. POOL BONUS DE DIAMANTS </h5>
+                    <p>Nos affiliés sont une grande partie du succès de notre entreprise. Nous en sommes conscients
+                        et souhaitons vous récompenser encore plus en vous permettant de partager les ventes totales
+                        de l'ensemble de l'entreprise. Une fois que vous aurez atteint le rang Diamant, vous
+                        partagerez 2 % des ventes totales de l'entreprise chaque mois !</p>
+                    </section>
+                <section>
+                    <h3>Piscine Diamant</h3>
+                    <p>2 % répartis entre tous les membres classés Diamant qualifiés.</p>
+                    <p>2 % du total des ventes de toutes les ventes d'adhésions et de produits sont répartis
+                        également entre tous les affiliés qualifiés classés Diamant et payés avec des commissions
+                        mensuelles.</p>
+                    </section>
 
-              <div class="w3-white">
-                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-              </div>
-              <p class="w3-wide">6. POOL BONUS DE DIAMANTS</p>
-              <p>Nos affiliés sont une grande partie du succès de notre entreprise. Nous en sommes conscients
-                et souhaitons vous récompenser encore plus en vous permettant de partager les ventes totales
-                de l'ensemble de l'entreprise. Une fois que vous aurez atteint le rang Diamant, vous
-                partagerez 2 % des ventes totales de l'entreprise chaque mois !</p>
-       
+                <section>
+                    <h2>Votre reussite en 3 etapes</h2>
 
-              <div class="w3-white">
-                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-              </div>
-              <p class="w3-wide">Piscine Diamant</p>
-              <p>2 % répartis entre tous les membres classés Diamant qualifiés.</p>
-              <p>2 % du total des ventes de toutes les ventes d'adhésions et de produits sont répartis
-                  également entre tous les affiliés qualifiés classés Diamant et payés avec des commissions
-                  mensuelles.</p>
-
-              <div class="w3-white">
-                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-              </div>
-              <p class="w3-wide">Votre reussite en 3 etapes</p>
-              <li>Etape 1</li>
+                    <ul>
+                        <li>Etape 1</li>
                         <p>
                             La première étape consiste à vous inscrire et à activer votre compte. Le premier mois,
                             vous paierez
@@ -608,203 +625,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                     </ul>
 
-           
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div>
+                </section>
+                <footer>
+                    <p>&copy; <span id="currentYear"></span> liveGood</p>
+            
+                </footer>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Telecharger le resume
-    </button>
-    
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">Mes Prix</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Acceuil</li>
-          <li class="w3-padding-16">Langues vivantes</li>
-          <li class="w3-padding-16">Rang</li>
-          <li class="w3-padding-16">Contact</li>
-          <li class="w3-padding-16">photo</li>
-            <h2>$ 10</h2>
-            <span class="w3-opacity">par mois</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">S'inscrire</button>
-          </li>
-        </ul>
-      </div>
+<script src="SCRIPT/script.js"></script>
+<script src="SCRIPT/scriptDate.js"></script>
+<script src="SCRIPT/scriptFooter.js"></script>
 
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Acuueil</li>
-          <li class="w3-padding-16">Rang</li>
-          <li class="w3-padding-16">contact</li>
-          <li class="w3-padding-16">Photo</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">par mois</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">S'inscrire</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
-    
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">Ma Reputation</h3>  
-    <img src="VIDEOS/livgood3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <section>
-        <h2>Qualifications Live Good Rank</h2>
-    </section>
-        
-    <section>
-        <h3>BRONZE</h3>
-        <p>Doit avoir 2 membres actifs personnellement inscrits.</p>
-    </section>
-        
-    <section>
-        <h3>ARGENT / SILVER</h3>
-        <p>Doit avoir 10 membres actifs personnellement inscrits plus un total de 20 membres actifs dans votre équipe, ou 3 branches d'arbre d'enrôlement distinctes chacune avec un affilié classé Bronze plus un total de 20 membres actifs dans votre équipe.</p>
-    </section>
-        
-    <section>
-        <h3>OR / GOLD</h3>
-        <p>Doit avoir 30 membres actifs personnellement inscrits plus un total de 100 membres actifs dans votre équipe d'arbre d'inscription, ou 3 branches distinctes d'arbre d'inscription avec un affilié classé Argent plus un total de 100 membres actifs dans votre équipe. Ou 100 membres actifs dans votre équipe de l'arborescence des recruteurs, avec un maximum de 30 membres à partir de chaque branche de l'arborescence des recruteurs.</p>
-    </section>
-        
-    <section>
-        <h3>PLATINE / PLATINUM</h3>
-        <p>Doit avoir 100 membres actifs personnellement inscrits plus un total de 500 membres actifs dans votre équipe d'arbre d'inscription, ou 3 branches distinctes d'arbre d'inscription avec un affilié classé Or plus un total de 500 membres actifs dans votre équipe d'arbre d'inscription. Ou 500 membres actifs dans votre équipe de l'arbre des recruteurs avec pas plus de 150 à partir de n'importe quelle branche de l'arbre des recruteurs.</p>
-    </section>
-        
-    <section>
-        <h3>DIAMANT / DIAMOND</h3>
-        <p>Doit avoir 3 branches d'arbre d'inscription distinctes avec un affilié classé Platine, plus un total de 2 500 membres actifs dans votre équipe. Ou 2 500 membres actifs dans votre équipe de l'arborescence des recruteurs, avec un maximum de 500 participants à partir d'une branche individuelle de l'arborescence des recruteurs.</p>
-    </section>
-        
-    <section>
-        <h3>DIAMANT DE LA COURONNE</h3>
-        <p>Doit avoir un total de 50 000 membres dans votre équipe avec pas plus de 10 000 comptant à partir de n'importe quelle branche individuelle de l'arbre des recruteurs.</p>
-    </section>
-    
-    <section>
-        <p>*Les membres actifs sont les membres qui ont un abonnement actif pour le mois en cours.</p>
-    </section>
-    
-    <img src="VIDEOS/livgood5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Baouly'S Compagny</span> CEO at Company self-employed.</p>
-    <p>Aucune entreprise n'est aussi meilleure que Livegood</p>
-    <h3>DIAMANT / DIAMOND</h3>
-    <p>Doit avoir 3 branches d'arbre d'inscription distinctes avec un affilié classé Platine, plus un total de 2 500 membres actifs dans votre équipe. Ou 2 500 membres actifs dans votre équipe de l'arborescence des recruteurs, avec un maximum de 500 participants à partir d'une branche individuelle de l'arborescence des recruteurs.</p>
-
-    <h3>DIAMANT DE LA COURONNE</h3>
-    <p>Doit avoir un total de 50 000 membres dans votre équipe avec pas plus de 10 000 comptant à partir de n'importe quelle branche individuelle de l'arbre des recruteurs.</p>
-
-  <!-- End About Section -->
-  </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">Mes Photos</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="VIDEOS/livgood1.png" style="width:100%">
-        <img src="VIDEOS/livgood2.jpg" style="width:100%">
-        <img src="VIDEOS/livgood3.png" style="width:100%">
-        <img src="VIDEOS/livgood4.jpg" style="width:100%">
-        <img src="VIDEOS/livgood4.jpg" style="width:100%">
-
-
-        
-
-       
-      </div>
-
-      <div class="w3-half">
-        <img src="VIDEOS/livgood5.png" style="width:100%">
-        <img src="VIDEOS/livgood3.jpg" style="width:100%">
-        <img src="VIDEOS/livgood1.png" style="width:100%">
-        <img src="VIDEOS/livgood2.jpg" style="width:100%">
-        <img src="VIDEOS/livgood3.png" style="width:100%">
-        <img src="VIDEOS/livgood4.jpg" style="width:100%">
-
-
-        
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contactez-Moi</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Port-au-prince,Ouest Haiti</p>
-      <!-- <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +509 44521822 / +50947403551</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: elconquistadorbaoulyn@mail.com</p> -->
-    </div><br>
-    <h2>Informations de contact</h2>
-    <p>Pour plus d'information, veuillez nous contacter
-        <a href="https://linktr.ee/anelson17">sur whatsapp et nos pages de reseaux sociaux</a>.
-    </p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> envoyer
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">livegood</a></p>
-  <!-- End footer -->
-  <p>&copy; <span id="currentYear"></span> liveGood</p>
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
 
 </body>
 </html>
+

@@ -1,0 +1,38 @@
+/* Styles de base pour la table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px; /* Limite la largeur maximale du tableau à 500 pixels */
+    margin: 0 auto; /* Centre le tableau horizontalement */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2; /* Couleur de fond pour les en-têtes de colonne */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Couleur de fond pour les lignes paires */
+}
+
+/* Réglages spécifiques pour les th et td */
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Ajoute une bordure inférieure pour les cellules */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+/* Réglages spécifiques pour les th */
+th {
+    background-color: #007bff; /* Couleur de fond pour les en-têtes de colonne */
+    color: white; /* Couleur du texte pour les en-têtes de colonne */
+}
