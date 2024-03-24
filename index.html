@@ -1,57 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/stylesNavBar.css">
-    <link rel="stylesheet" href="CSS/stylesTableau.css">
-    <link rel="stylesheet" href="CSS/stylesDate.css">
-
-
-
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation et Panneau Latéral</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <nav class="top-nav">
-   <p id="current-time"><i class="fa fa-clock-o"></i></p>
-    
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="produits.html">Rang</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-<div class="menu-icon">
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-toggle" onclick="toggleSidebar()" style="font-size: 24px;">☰</div>
+        <ul class="navbar-menu">
+          <li><a href="#" onclick="showContent('accueil-content')">Accueil</a></li>
+          <li><a href="#" onclick="showContent('rang-content')">Rang</a></li>
+          <li><a href="#" onclick="showContent('contact-content')">Contact</a></li>
+          <li><a href="#" onclick="toggleSearchForm()"><i class="fas fa-search"></i></a></li> <!-- Ajouter l'icône de recherche -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+<!-- Formulaire de recherche -->
+<div id="search-form" class="search-form">
+  <div class="search-input-container">
+    <input type="text" id="search-input" placeholder="Recherche...">
+    <span id="clear-input" class="clear-input" onclick="clearSearchInput()">&times;</span> <!-- Ajouter la petite croix pour effacer le texte -->
+  </div>
+  <button onclick="searchLinks()">Search</button>
+  <div id="search-results"></div>
+  <div id="no-results-message"></div>
 </div>
 
-<nav class="side-menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="produits.html">Rang</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="close-icon">&times;</div>
-</nav>
 
-<section>
-    <h2>Brève présentation de Livegood en français</h2>
-
-    <div style="text-align: center;">
-        <video width="560" height="315" controls>
-            <source src="VIDEOS/video.mp4" type="video/mp4">
-        </video>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="close-btn" onclick="toggleSidebar()" style="font-size: 24px;">✖</div>
     </div>
-    <p><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
-</section>
+   <!-- Liens à l'extrémité droite -->
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showContent('accueil-content')">Accueil</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showContent('rang-content')">Rang</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showContent('contact-content')">Contact</a>
+  </li>
 
-<section>
-    <h2>Brève présentation de Livegood en créole</h2>
+  <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showContent('rang-content')">Services</a>
+  </li>
+
+</ul>
+
+
+  </aside>
+
+  <div class="content">
+    <h2>Contenu Principal</h2>
+    <div style="text-align: center;">
+      <video width="560" height="315" controls>
+          <source src="VIDEOS/video.mp4" type="video/mp4">
+      </video>
+  
+  <p><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
+
+  <h2>Brève présentation de Livegood en créole</h2>
 
     <div style="text-align: center;">
         <video width="560" height="315" controls>
@@ -59,583 +78,621 @@
         </video>
     </div>
     <p><b>Pour réserver une position gratuitement, cliquez sur ce lien :</b> <a href="https://LiveGoodTour.com/Anelson">https://LiveGoodTour.com/Anelson</a></p>
-</section>
 
-<section>
-    <h3>Livegood qu'est-ce que c'est?</h3>
+
+</div>
+
+    <!-- Contenu caché pour chaque lien -->
+  <div id="accueil-content" class="hidden-content">
+    <h2>Accueil Page</h2>
     <p>LiveGood est une société de marketing de réseau créée aux États-Unis et devenue un phénomène mondial. Elle a été pré-lancée en juin 2022 aux USA, et officiellement lancée dans plus de 200 pays le 13 décembre 2022. Des gens du monde entier ont rejoint cette entreprise qui offre des produits multivitaminés et de beauté de la plus haute qualité et à très bon marché.</p>
     <p>En plus de ses produits, elle donne également la possibilité de gagner un revenu avec le plan de rémunération le plus excitant de l'industrie ! En fait, vous pouvez gagner jusqu'à 2 047,50 $ par MOIS sans jamais inscrire une seule personne ! Et si vous décidez de partager les produits et le plan de rémunération avec d'autres, vous pouvez gagner encore plus !</p>
-</section>
-
-<section>
-    <h2>Commissions</h2>
-</section>
-    <h5>1. COMMISSIONS DE DÉMARRAGE RAPIDE HEBDOMADAIRES </h5>
-    <p>
-
-        Pour chaque personne que vous référez à Live Good qui devient membre et affilié pour 49,95 $, nous vous
-        récompenserons avec une commission de 25 $ payée dès la semaine prochaine !
-        De plus, si l'une des personnes que vous inscrivez choisit d'en inscrire d'autres, non seulement elle sera
-        récompensée, mais vous recevrez également des commissions bonus supplémentaires jusqu'à 10 niveaux de
-        profondeur.
-    </p>
-
-</section>
-
-        <table id="matable" class="table-large">
-            <tr>
-                <th>Niveau/Rang</th>
-                <th>Non classé</th>
-                <th>Bronze</th>
-                <th>Argent</th>
-                <th>Or</th>
-                <th>Platine</th>
-                <th>Diamant</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>50%</td>
-                <td>50%</td>
-                <td>50%</td>
-                <td>50%</td>
-                <td>50%</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>dix%</td>
-                <td>dix%</td>
-                <td>dix%</td>
-                <td>dix%</td>
-                <td>dix%</td>
-                <td>dix%</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td></td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td></td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-                <td>5%</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td></td>
-                <td></td>
-                <td>3%</td>
-                <td>3%</td>
-                <td>3%</td>
-                <td>3%</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td></td>
-                <td></td>
-                <td>2%</td>
-                <td>2%</td>
-                <td>2%</td>
-                <td>2%</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>2%</td>
-                <td>2%</td>
-                <td>2%</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1%</td>
-                <td>1%</td>
-                <td>1%</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1%</td>
-                <td>1%</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1%</td>
-            </tr>
-        </table>
-
-        <section>
-
-        <h5>2. COMMISSIONS MATRICIELLES</h5>
-        <p>Lorsque vous verrouillez votre position dans Live Good , vous bénéficiez de votre propre centre
-            d'affaires dans notre matrice 2x15 à remplissage rapide ! Au fur et à mesure que de plus en plus de
-            personnes rejoignent Live Good chaque semaine, elles sont placées dans la matrice SOUS tous ceux qui y
-            sont déjà, à la suite de leur recruteur. Ainsi, plus tôt vous verrouillez votre position, plus votre
-            position sera élevée dans la matrice.</p>
 
 
-            <table>
-                <tr>
-                    <th>Gains par niveau</th>
-                    <th>Non classé</th>
-                    <th>Bronze</th>
-                    <th>Argent</th>
-                    <th>Or</th>
-                    <th>Platine</th>
-                    <th>Diamant</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>dix</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td></td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td></td>
-                    <td></td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>2,50 %</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>2 047,50 $</td>
-                    <td>4 095,50 $</td>
-                    <td>4 095,50 $</td>
-                    <td>8 191,50 $</td>
-                    <td>8 191,50 $</td>
-                    <td>16 383,50 $</td>
-                </tr>
-            </table>
-                
-        </section>
-            <section>
-                <h5>3. BONUS CORRESPONDANTS</h5>
-                <p>Aussi ÉNORMES que soient les commissions de démarrage rapide et les bonus matriciels, nos bonus de contrepartie sont encore PLUS GROS ! En plus des 2 047,50 $ ou jusqu'à 16 383,50 que vous pouvez gagner dans votre matrice personnelle, vous égalerez également 50 % des commissions matricielles sur toutes les personnes que vous inscrivez, ET un pourcentage pour toutes ces personnes inscrivent CINQ GÉNÉRATIONS D'INSCRIPTION EN PROFONDEUR, peu importe où elles se situent dans votre matrice !</p>
-            </section>
-        <section>
-                <table>
-                    <tr>
-                        <th>Rang</th>
-                        <th>1ère génération</th>
-                        <th>2e génération</th>
-                        <th>3e génération</th>
-                        <th>4e génération</th>
-                        <th>5e génération</th>
-                    </tr>
-                    <tr>
-                        <td>Inscrit personnellement</td>
-                        <td>50%</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Argent</td>
-                        <td>10%</td>
-                        <td>10%</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Or</td>
-                        <td>5%</td>
-                        <td>5%</td>
-                        <td>5%</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Platine</td>
-                        <td>5%</td>
-                        <td>5%</td>
-                        <td>5%</td>
-                        <td>5%</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Diamant</td>
-                        <td>3%</td>
-                        <td>3%</td>
-                        <td>3%</td>
-                        <td>3%</td>
-                        <td>3%</td>
-                    </tr>
-                </table>
-            
-            </section>
+    <h2>Livegood qu'est-ce que c'est?</h2>
+      <p>LiveGood est une société de marketing de réseau créée aux États-Unis et devenue un phénomène mondial. Elle a été pré-lancée en juin 2022 aux USA, et officiellement lancée dans plus de 200 pays le 13 décembre 2022. Des gens du monde entier ont rejoint cette entreprise qui offre des produits multivitaminés et de beauté de la plus haute qualité et à très bon marché.</p>
+      <p>En plus de ses produits, elle donne également la possibilité de gagner un revenu avec le plan de rémunération le plus excitant de l'industrie ! En fait, vous pouvez gagner jusqu'à 2 047,50 $ par MOIS sans jamais inscrire une seule personne ! Et si vous décidez de partager les produits et le plan de rémunération avec d'autres, vous pouvez gagner encore plus !</p>
 
-<section>
-                <h5>4. COMMISSIONS DE VENTE AU DÉTAIL</h5>
-                <p>Chacun de nos produits qui changent la vie a un prix membre et un prix de détail. Alors que la
-                    plupart des gens choisissent de profiter de notre incroyable abonnement pour seulement 9,95 $
-                    par mois afin qu'ils puissent économiser beaucoup plus avec les prix des membres, certaines
-                    personnes peuvent simplement vouloir faire des achats aux prix de détail.
-                    En tant qu'affilié de Live Good , chaque fois qu'un de vos filleuls effectue un achat en tant
-                    que client de détail, vous gagnerez 50 % de la différence entre le prix de membre et le prix de
-                    détail.
-                    Les commissions de vente au détail sont payées selon la même structure de paiement que les
-                    commissions de démarrage rapide. Contrairement aux commissions de démarrage rapide qui ne sont
-                    payées qu'une seule fois, les commissions de détail peuvent être gagnées un nombre illimité de
-                    fois chaque fois qu'un client de détail passe une commande.
-                </p>
-            </section>
-        <section>
-                
-            <table>
-                <tr>
-                    <th>Niveau/Rang</th>
-                    <th>Non classé</th>
-                    <th>Bronze</th>
-                    <th>Argent</th>
-                    <th>Or</th>
-                    <th>Platine</th>
-                    <th>Diamant</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>50%</td>
-                    <td>50%</td>
-                    <td>50%</td>
-                    <td>50%</td>
-                    <td>50%</td>
-                    <td>50%</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td>10%</td>
-                    <td>10%</td>
-                    <td>10%</td>
-                    <td>10%</td>
-                    <td>10%</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td>5%</td>
-                    <td>5%</td>
-                    <td>5%</td>
-                    <td>5%</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td>5%</td>
-                    <td>5%</td>
-                    <td>5%</td>
-                    <td>5%</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>3%</td>
-                    <td>3%</td>
-                    <td>3%</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>2%</td>
-                    <td>2%</td>
-                    <td>2%</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>2%</td>
-                    <td>2%</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>1%</td>
-                    <td>1%</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>1%</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>1%</td>
-                </tr>
-            </table>
+      <h2>Commissions</h2>
+  
+      <h5>1. COMMISSIONS DE DÉMARRAGE RAPIDE HEBDOMADAIRES </h5>
+      <p>
+  
+          Pour chaque personne que vous référez à Live Good qui devient membre et affilié pour 49,95 $, nous vous
+          récompenserons avec une commission de 25 $ payée dès la semaine prochaine !
+          De plus, si l'une des personnes que vous inscrivez choisit d'en inscrire d'autres, non seulement elle sera
+          récompensée, mais vous recevrez également des commissions bonus supplémentaires jusqu'à 10 niveaux de
+          profondeur.
+      </p>
+  
+  
+  
+          <table id="matable" class="table-large">
+              <tr>
+                  <th>Niveau/Rang</th>
+                  <th>Non classé</th>
+                  <th>Bronze</th>
+                  <th>Argent</th>
+                  <th>Or</th>
+                  <th>Platine</th>
+                  <th>Diamant</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>50%</td>
+                  <td>50%</td>
+                  <td>50%</td>
+                  <td>50%</td>
+                  <td>50%</td>
+                  <td>50%</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>dix%</td>
+                  <td>dix%</td>
+                  <td>dix%</td>
+                  <td>dix%</td>
+                  <td>dix%</td>
+                  <td>dix%</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td></td>
+                  <td></td>
+                  <td>3%</td>
+                  <td>3%</td>
+                  <td>3%</td>
+                  <td>3%</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td></td>
+                  <td></td>
+                  <td>2%</td>
+                  <td>2%</td>
+                  <td>2%</td>
+                  <td>2%</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>2%</td>
+                  <td>2%</td>
+                  <td>2%</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1%</td>
+                  <td>1%</td>
+                  <td>1%</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1%</td>
+                  <td>1%</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1%</td>
+              </tr>
+          </table>
+  
+          
+  
+          <h5>2. COMMISSIONS MATRICIELLES</h5>
+          <p>Lorsque vous verrouillez votre position dans Live Good , vous bénéficiez de votre propre centre
+              d'affaires dans notre matrice 2x15 à remplissage rapide ! Au fur et à mesure que de plus en plus de
+              personnes rejoignent Live Good chaque semaine, elles sont placées dans la matrice SOUS tous ceux qui y
+              sont déjà, à la suite de leur recruteur. Ainsi, plus tôt vous verrouillez votre position, plus votre
+              position sera élevée dans la matrice.</p>
+  
+              <table>
+                  <tr>
+                      <th>Gains par niveau</th>
+                      <th>Non classé</th>
+                      <th>Bronze</th>
+                      <th>Argent</th>
+                      <th>Or</th>
+                      <th>Platine</th>
+                      <th>Diamant</th>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>8</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>dix</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>12</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>13</td>
+                      <td></td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>14</td>
+                      <td></td>
+                      <td></td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>15</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>2,50 %</td>
+                  </tr>
+                  <tr>
+                      <td>Total</td>
+                      <td>2 047,50 $</td>
+                      <td>4 095,50 $</td>
+                      <td>4 095,50 $</td>
+                      <td>8 191,50 $</td>
+                      <td>8 191,50 $</td>
+                      <td>16 383,50 $</td>
+                  </tr>
+              </table>
+                  
+          
+              
+                  <h5>3. BONUS CORRESPONDANTS</h5>
+                  <p>Aussi ÉNORMES que soient les commissions de démarrage rapide et les bonus matriciels, nos bonus de contrepartie sont encore PLUS GROS ! En plus des 2 047,50 $ ou jusqu'à 16 383,50 que vous pouvez gagner dans votre matrice personnelle, vous égalerez également 50 % des commissions matricielles sur toutes les personnes que vous inscrivez, ET un pourcentage pour toutes ces personnes inscrivent CINQ GÉNÉRATIONS D'INSCRIPTION EN PROFONDEUR, peu importe où elles se situent dans votre matrice !</p>
+              
+          
+                  <table>
+                      <tr>
+                          <th>Rang</th>
+                          <th>1ère génération</th>
+                          <th>2e génération</th>
+                          <th>3e génération</th>
+                          <th>4e génération</th>
+                          <th>5e génération</th>
+                      </tr>
+                      <tr>
+                          <td>Inscrit personnellement</td>
+                          <td>50%</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>Argent</td>
+                          <td>10%</td>
+                          <td>10%</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>Or</td>
+                          <td>5%</td>
+                          <td>5%</td>
+                          <td>5%</td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>Platine</td>
+                          <td>5%</td>
+                          <td>5%</td>
+                          <td>5%</td>
+                          <td>5%</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>Diamant</td>
+                          <td>3%</td>
+                          <td>3%</td>
+                          <td>3%</td>
+                          <td>3%</td>
+                          <td>3%</td>
+                      </tr>
+                  </table>
+              
+              
+  
+  
+                  <h5>4. COMMISSIONS DE VENTE AU DÉTAIL</h5>
+                  <p>Chacun de nos produits qui changent la vie a un prix membre et un prix de détail. Alors que la
+                      plupart des gens choisissent de profiter de notre incroyable abonnement pour seulement 9,95 $
+                      par mois afin qu'ils puissent économiser beaucoup plus avec les prix des membres, certaines
+                      personnes peuvent simplement vouloir faire des achats aux prix de détail.
+                      En tant qu'affilié de Live Good , chaque fois qu'un de vos filleuls effectue un achat en tant
+                      que client de détail, vous gagnerez 50 % de la différence entre le prix de membre et le prix de
+                      détail.
+                      Les commissions de vente au détail sont payées selon la même structure de paiement que les
+                      commissions de démarrage rapide. Contrairement aux commissions de démarrage rapide qui ne sont
+                      payées qu'une seule fois, les commissions de détail peuvent être gagnées un nombre illimité de
+                      fois chaque fois qu'un client de détail passe une commande.
+                  </p>
+              
+          
+                  
+              <table>
+                  <tr>
+                      <th>Niveau/Rang</th>
+                      <th>Non classé</th>
+                      <th>Bronze</th>
+                      <th>Argent</th>
+                      <th>Or</th>
+                      <th>Platine</th>
+                      <th>Diamant</th>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>50%</td>
+                      <td>50%</td>
+                      <td>50%</td>
+                      <td>50%</td>
+                      <td>50%</td>
+                      <td>50%</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td></td>
+                      <td>10%</td>
+                      <td>10%</td>
+                      <td>10%</td>
+                      <td>10%</td>
+                      <td>10%</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td></td>
+                      <td></td>
+                      <td>5%</td>
+                      <td>5%</td>
+                      <td>5%</td>
+                      <td>5%</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td></td>
+                      <td></td>
+                      <td>5%</td>
+                      <td>5%</td>
+                      <td>5%</td>
+                      <td>5%</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>3%</td>
+                      <td>3%</td>
+                      <td>3%</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>2%</td>
+                      <td>2%</td>
+                      <td>2%</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>2%</td>
+                      <td>2%</td>
+                  </tr>
+                  <tr>
+                      <td>8</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>1%</td>
+                      <td>1%</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>1%</td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>1%</td>
+                  </tr>
+              </table>
+  
+              
+              
+  
+                  <h5>5. BONUS INFLUENCEURS</h5>
+                  <p>Pour les affiliés qui choisissent de commercialiser des produits auprès de clients de détail à
+                      plus grande échelle, vous gagnerez des bonus supplémentaires sur tout ce volume. En fait, vous
+                      gagnerez jusqu'à 100 % de la différence entre le prix Membre et le prix de détail sur toutes les
+                      commandes de vos clients de détail référés.
+                      Les bonus d'influence sont payés exclusivement en fonction du volume de vente au détail
+                      personnellement inscrit par mois, quel que soit le rang.
+                  </p>
+              
+          
+                      <table>
+                          <tr>
+                              <th>Total des ventes au détail par mois</th>
+                              <th>Commissions supplémentaires</th>
+                              <th>Commissions totales sur les clients personnels</th>
+                          </tr>
+                          <tr>
+                              <td>2 500 $</td>
+                              <td>dix%</td>
+                              <td>60%</td>
+                          </tr>
+                          <tr>
+                              <td>5 000 $</td>
+                              <td>20%</td>
+                              <td>70%</td>
+                          </tr>
+                          <tr>
+                              <td>10 000 $</td>
+                              <td>30%</td>
+                              <td>80%</td>
+                          </tr>
+                          <tr>
+                              <td>25 000 $</td>
+                              <td>40%</td>
+                              <td>90%</td>
+                          </tr>
+                          <tr>
+                              <td>50 000 $</td>
+                              <td>50%</td>
+                              <td>100%</td>
+                          </tr>
+                      </table>
+                  
+                  
+                      <h5>6. POOL BONUS DE DIAMANTS </h5>
+                      <p>Nos affiliés sont une grande partie du succès de notre entreprise. Nous en sommes conscients
+                          et souhaitons vous récompenser encore plus en vous permettant de partager les ventes totales
+                          de l'ensemble de l'entreprise. Une fois que vous aurez atteint le rang Diamant, vous
+                          partagerez 2 % des ventes totales de l'entreprise chaque mois !</p>
+                      
+                  
+                      <h2>Piscine Diamant<h2>
+                      <p>2 % répartis entre tous les membres classés Diamant qualifiés.</p>
+                      <p>2 % du total des ventes de toutes les ventes d'adhésions et de produits sont répartis
+                          également entre tous les affiliés qualifiés classés Diamant et payés avec des commissions
+                          mensuelles.</p>
+                      
+  
+                  
+                      <h2>Votre reussite en 3 etapes</h2>
+  
+                      <ul>
+                          <li>Etape 1</li>
+                          <p>
+                              La première étape consiste à vous inscrire et à activer votre compte. Le premier mois,
+                              vous paierez
+                              49,95 dollars et à partir du deuxième mois, seulement 9,95 dollars par mois.
+                              Avec cela, vous garantissez déjà votre position dans le PowerLine.
+                          <p>voici le lien d’inscription ou de preinscription :<a
+                                  href="https://LiveGoodTour.com/Anelson">
+                                  https://LiveGoodTour.com/Anelson </a> </p>
+  
+                          </p>
+                          <li>Etape 2</li>
+                          <p>Le site génère des inscriptions partout dans le monde et nombre d'entre elles pourront
+                              s'inscrire en
+                              dessous de vous. Ainsi, même si vous ne faites absolument rien, avec le temps, vous
+                              commencerez à avoir
+                              des prospects en dessous de vous, il suffit seulement de rester actif dans le sistème,
+                              c’est-à-dire de
+                              payer l’abonnement de 9.95 dollars par mois.
+                              Vous pourriez gagner jusqu'à 2 047 $ par mois si vous ne faites que rester actif.</p>
+                          <li>Etape 3</li>
+                          <p>Si vous souhaitez augmenter vos revenus, vous devez partager cette opportunité avec vos
+                              amis. Chaque
+                              nouvelle inscription active que vous effectuez vous rapportera 25 dollars. Avec
+                              seulement 2
+                              inscriptions, vous récupérez déjà votre investissement.
+                              De plus, vous pouvez avoir des gains bien plus élevés avec tous les bonus. LiveGood a un
+                              total de 6
+                              formes de revenus que vous pouvez vérifier là-dessous.</p>
+  
+                      </ul>
+  
+  </div>
 
-            
-            </section>
-<section>
-                <h5>5. BONUS INFLUENCEURS</h5>
-                <p>Pour les affiliés qui choisissent de commercialiser des produits auprès de clients de détail à
-                    plus grande échelle, vous gagnerez des bonus supplémentaires sur tout ce volume. En fait, vous
-                    gagnerez jusqu'à 100 % de la différence entre le prix Membre et le prix de détail sur toutes les
-                    commandes de vos clients de détail référés.
-                    Les bonus d'influence sont payés exclusivement en fonction du volume de vente au détail
-                    personnellement inscrit par mois, quel que soit le rang.
-                </p>
-            </section>
-        <section>
-                    <table>
-                        <tr>
-                            <th>Total des ventes au détail par mois</th>
-                            <th>Commissions supplémentaires</th>
-                            <th>Commissions totales sur les clients personnels</th>
-                        </tr>
-                        <tr>
-                            <td>2 500 $</td>
-                            <td>dix%</td>
-                            <td>60%</td>
-                        </tr>
-                        <tr>
-                            <td>5 000 $</td>
-                            <td>20%</td>
-                            <td>70%</td>
-                        </tr>
-                        <tr>
-                            <td>10 000 $</td>
-                            <td>30%</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr>
-                            <td>25 000 $</td>
-                            <td>40%</td>
-                            <td>90%</td>
-                        </tr>
-                        <tr>
-                            <td>50 000 $</td>
-                            <td>50%</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </section>
-                <section>
-                    <h5>6. POOL BONUS DE DIAMANTS </h5>
-                    <p>Nos affiliés sont une grande partie du succès de notre entreprise. Nous en sommes conscients
-                        et souhaitons vous récompenser encore plus en vous permettant de partager les ventes totales
-                        de l'ensemble de l'entreprise. Une fois que vous aurez atteint le rang Diamant, vous
-                        partagerez 2 % des ventes totales de l'entreprise chaque mois !</p>
-                    </section>
-                <section>
-                    <h3>Piscine Diamant</h3>
-                    <p>2 % répartis entre tous les membres classés Diamant qualifiés.</p>
-                    <p>2 % du total des ventes de toutes les ventes d'adhésions et de produits sont répartis
-                        également entre tous les affiliés qualifiés classés Diamant et payés avec des commissions
-                        mensuelles.</p>
-                    </section>
-
-                <section>
-                    <h2>Votre reussite en 3 etapes</h2>
-
-                    <ul>
-                        <li>Etape 1</li>
-                        <p>
-                            La première étape consiste à vous inscrire et à activer votre compte. Le premier mois,
-                            vous paierez
-                            49,95 dollars et à partir du deuxième mois, seulement 9,95 dollars par mois.
-                            Avec cela, vous garantissez déjà votre position dans le PowerLine.
-                        <p>voici le lien d’inscription ou de preinscription :<a
-                                href="https://LiveGoodTour.com/Anelson">
-                                https://LiveGoodTour.com/Anelson </a> </p>
-
-                        </p>
-                        <li>Etape 2</li>
-                        <p>Le site génère des inscriptions partout dans le monde et nombre d'entre elles pourront
-                            s'inscrire en
-                            dessous de vous. Ainsi, même si vous ne faites absolument rien, avec le temps, vous
-                            commencerez à avoir
-                            des prospects en dessous de vous, il suffit seulement de rester actif dans le sistème,
-                            c’est-à-dire de
-                            payer l’abonnement de 9.95 dollars par mois.
-                            Vous pourriez gagner jusqu'à 2 047 $ par mois si vous ne faites que rester actif.</p>
-                        <li>Etape 3</li>
-                        <p>Si vous souhaitez augmenter vos revenus, vous devez partager cette opportunité avec vos
-                            amis. Chaque
-                            nouvelle inscription active que vous effectuez vous rapportera 25 dollars. Avec
-                            seulement 2
-                            inscriptions, vous récupérez déjà votre investissement.
-                            De plus, vous pouvez avoir des gains bien plus élevés avec tous les bonus. LiveGood a un
-                            total de 6
-                            formes de revenus que vous pouvez vérifier là-dessous.</p>
-
-                    </ul>
-
-                </section>
-                <footer>
-                    <p>&copy; <span id="currentYear"></span> liveGood</p>
-            
-                </footer>
-
-<script src="SCRIPT/script.js"></script>
-<script src="SCRIPT/scriptDate.js"></script>
-<script src="SCRIPT/scriptFooter.js"></script>
 
 
+
+  <div id="rang-content" class="hidden-content">
+    <h2>Services Content</h2>
+    <h3>Qualifications Live Good Rank</h3>
+    <h2>BRONZE</h2>
+    <p>Doit avoir 2 membres actifs personnellement inscrits.</p>
+
+    <h2>ARGENT / SILVER</h2>
+    <p>Doit avoir 10 membres actifs personnellement inscrits plus un total de 20 membres actifs dans votre équipe, ou 3 branches d'arbre d'enrôlement distinctes chacune avec un affilié classé Bronze plus un total de 20 membres actifs dans votre équipe.</p>
+    <h2>OR / GOLD</h2>
+    <p>Doit avoir 30 membres actifs personnellement inscrits plus un total de 100 membres actifs dans votre équipe d'arbre d'inscription, ou 3 branches distinctes d'arbre d'inscription avec un affilié classé Argent plus un total de 100 membres actifs dans votre équipe. Ou 100 membres actifs dans votre équipe de l'arborescence des recruteurs, avec un maximum de 30 membres à partir de chaque branche de l'arborescence des recruteurs.</p>
+
+    <h2>PLATINE / PLATINUM</h2>
+    <p>Doit avoir 100 membres actifs personnellement inscrits plus un total de 500 membres actifs dans votre équipe d'arbre d'inscription, ou 3 branches distinctes d'arbre d'inscription avec un affilié classé Or plus un total de 500 membres actifs dans votre équipe d'arbre d'inscription. Ou 500 membres actifs dans votre équipe de l'arbre des recruteurs avec pas plus de 150 à partir de n'importe quelle branche de l'arbre des recruteurs.</p>
+
+    <h2>DIAMANT / DIAMOND</h2>
+    <p>Doit avoir 3 branches d'arbre d'inscription distinctes avec un affilié classé Platine, plus un total de 2 500 membres actifs dans votre équipe. Ou 2 500 membres actifs dans votre équipe de l'arborescence des recruteurs, avec un maximum de 500 participants à partir d'une branche individuelle de l'arborescence des recruteurs.</p>
+
+    <h2>DIAMANT DE LA COURONNE</h2>
+    <p>Doit avoir un total de 50 000 membres dans votre équipe avec pas plus de 10 000 comptant à partir de n'importe quelle branche individuelle de l'arbre des recruteurs.</p>
+
+    <p>*Les membres actifs sont les membres qui ont un abonnement actif pour le mois en cours.</p>
+  </div>
+
+  <div id="contact-content" class="hidden-content">
+    <h2>Informations de contact</h2>
+    
+  <p>Pour plus d'information, veuillez nous contacter
+      <a href="https://linktr.ee/anelson17">sur whatsapp et nos pages de reseaux sociaux</a>.
+  </p>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> liveGood</p>
+<!-- Ajoutez ceci à l'endroit où vous voulez afficher la flèche -->
+<button id="backToTopBtn" title="Retour en haut">&#9650;</button>
+</footer>
+
+  <script src="SCRIPT/script.js"></script>
+  
 </body>
-</html>
 
+</html>

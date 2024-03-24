@@ -1,113 +1,279 @@
-/* Styles pour le corps de la page */
 body {
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    margin: 0; /* Supprime les marges par défaut */
-    padding: 0; /* Supprime les espaces intérieurs par défaut */
-    font-family: 'Arial', sans-serif; /* Utilise la police Arial ou une police sans-serif par défaut */
-    display: flex; /* Utilise le modèle de boîte flexible */
-    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
-    flex-direction: column; /* Dispose les éléments enfants en colonne */
-    min-height: 100vh; /* 100% de la hauteur de la fenêtre visible */
+  margin: 0;
+  /* Élimine les marges par défaut */
+  padding: 0;
+  /* Élimine les espaces internes par défaut */
+  font-family: Arial, sans-serif;
+  /* Choix d'une police lisible */
+  line-height: 1.6;
+  /* Améliore la lisibilité avec un espacement de ligne confortable */
+  color: #333;
+  /* Couleur de texte par défaut */
+  background-color: #f7f7f7;
+  /* Couleur de fond pour un contraste agréable */
+  overflow-x: hidden;
+  /* Empêche le défilement horizontal */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Styles pour l'icône du menu */
-.menu-icon {
-    display: block; /* Affiche l'élément en tant que bloc */
-    background: #333; /* Couleur de fond de l'icône */
-    color: #fff; /* Couleur du texte */
-    padding: 10px; /* Espacement intérieur */
-    cursor: pointer; /* Curseur de la souris au survol */
-    font-size: 36px; /* Taille de la police */
+header {
+  color: white;
+  background: green;
+
 }
 
-/* Styles pour les barres de l'icône du menu */
-.menu-icon-bar {
-    display: block; /* Affiche l'élément en tant que bloc */
-    width: 25px; /* Largeur des barres */
-    height: 3px; /* Hauteur des barres */
-    background: #fff; /* Couleur des barres */
-    margin: 5px 0; /* Marge supérieure et inférieure des barres */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  overflow: hidden;
+  /* Ajout de l'overflow hidden */
 }
 
-/* Styles pour le menu latéral */
-.side-menu {
-    position: fixed; /* Position fixée par rapport à la fenêtre du navigateur */
-    top: 0; /* Position à partir du haut de la fenêtre */
-    left: -250px; /* Position à partir de la gauche de la fenêtre (masqué initialement) */
-    width: 250px; /* Largeur du menu */
-    height: 100%; /* Hauteur du menu, occupant toute la hauteur de la fenêtre */
-    background: #333; /* Couleur de fond du menu */
-    padding-top: 50px; /* Espacement en haut du menu */
-    transition: left 0.3s ease; /* Effet de transition pour l'animation de l'ouverture/fermeture du menu */
+.navbar-brand {
+  font-size: 1.5em;
 }
 
-/* Styles pour la liste non ordonnée à l'intérieur du menu */
-.side-menu ul {
-    list-style-type: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime les espaces intérieurs de la liste */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Styles pour les éléments de la liste dans le menu */
-.side-menu ul li {
-    padding: 10px; /* Espacement autour des éléments de la liste */
+.navbar-menu li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-/* Styles pour les liens à l'intérieur des éléments de la liste */
-.side-menu ul li a {
-    color: #fff; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime la soulignement des liens */
+.navbar-menu li:last-child {
+  margin-right: 0;
 }
 
-/* Styles pour l'icône de fermeture du menu */
-.close-icon {
-    position: absolute; /* Position absolue par rapport au conteneur parent */
-    top: 10px; /* Position à partir du haut du menu */
-    right: 10px; /* Position à partir de la droite du menu */
-    font-size: 36px; /* Taille de la police de l'icône */
-    color: #fff; /* Couleur de l'icône */
-    cursor: pointer; /* Curseur de la souris au survol */
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
-section p {
-    text-align: justify;
-    /* Ajouter une réinitialisation des styles */
-    word-spacing: normal;
-    letter-spacing: normal;
-    font-size: 24px;
-    max-width: 600px; /* Ajustez cette valeur selon vos besoins */
-    margin: 0 auto; /* Pour centrer le paragraphe */
+.navbar-menu li a:hover {
+  color: red;
+  transform: scale(1.1);
+  background-color: wheat;
 }
 
-
-/* Ajoute une marge en bas à chaque section */
-section {
-    background-color: whitesmoke; /* Couleur de fond pour toutes les sections */
-    margin-bottom: 20px;
+.navbar-toggle {
+  cursor: pointer;
 }
 
-
-
-/* Styles pour chaque titre individuel */
-h2, h3, h4, h5, h6 {
-    color: #333; /* Couleur du texte */
-    text-align: center; /* Centrer le titre */
-    padding: 10px; /* Espacement autour du titre */
-    border-radius: 5px; /* Bord arrondi */
-    font-size: 24px; /* Taille de la police */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
 }
 
-/* Appliquer le fond gris uniquement aux titres h2 */
-h2 {
-    background-color: gray; /* Couleur de fond du titre h2 */
+.sidebar-header {
+  padding: 5px;
+  text-align: right;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px;
 }
 
 
+/* Style pour la zone de contenu principale */
+.content {
+  flex-grow: 1;
+  margin-left: 0;
+  /* Initialisé à zéro */
+  padding: 10px;
+  overflow-x: hidden;
+  /* Empêche le débordement horizontal */
+}
 
-/* Styles pour le footer */
+/* Style pour masquer le contenu */
+.hidden-content {
+  display: none;
+}
+
+.navbar-toggle {
+  transition: transform 0.3s ease;
+}
+
+p {
+  font-size: 18px;
+}
+
+h2,
+h3 {
+  background-color: #333;
+  color: white;
+}
+
+.navbar-toggle:hover {
+  transform: scale(1.2);
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: red;
+  transform: scale(1.1);
+  background-color: wheat;
+  overflow-x: hidden;
+  /* Empêche le débordement horizontal */
+
+}
+
+
+/* Styles pour le formulaire de recherche */
+.search-form {
+  display: none;
+  /* Initialement masqué */
+  position: absolute;
+  top: 50px;
+  /* Ajuster selon la hauteur de la barre de navigation */
+  right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+h2,
+p,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+
+.search-form.show {
+  display: block;
+  /* Afficher lorsque activé */
+}
+
+/* Votre CSS existant */
+
+/* Style pour la petite croix */
+.clear-input {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: red;
+  display: none;
+  /* Masquer initialement la petite croix */
+  /* Styles supplémentaires */
+}
+
+/* Alignement et style pour le conteneur de la zone de recherche */
+.search-input-container {
+  position: relative;
+}
+
 footer {
-    text-align: center; /* Centrer le contenu du footer */
-    background-color: #333; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    padding: 20px; /* Ajoute un espace intérieur autour du contenu */
-    margin-top: auto; /* Le footer reste en bas de l'écran */
+  position: relative;
+  /* Utilisez "relative" au lieu de "fixed" */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: auto;
+  overflow-x: hidden;
+}
+
+/* Styles de base pour la table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  /* Limite la largeur maximale du tableau à 500 pixels */
+  margin: 0 auto;
+  /* Centre le tableau horizontalement */
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  /* Couleur de fond pour les en-têtes de colonne */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Couleur de fond pour les lignes paires */
+}
+
+/* Réglages spécifiques pour les th et td */
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  /* Ajoute une bordure inférieure pour les cellules */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Couleur de fond pour les lignes paires */
+}
+
+/* Réglages spécifiques pour les th */
+th {
+  background-color: #007bff;
+  /* Couleur de fond pour les en-têtes de colonne */
+  color: white;
+  /* Couleur du texte pour les en-têtes de colonne */
+}
+
+/* Ajoutez ce code à votre feuille de style CSS */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#backToTopBtn:hover {
+  background-color: #0056b3;
 }
